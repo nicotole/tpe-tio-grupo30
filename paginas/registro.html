@@ -1,0 +1,26 @@
+<section class="contenedorPrincipalRegistro"> <!-- usar un section si el contenido puede ser guardado en una DB -->
+    <article class="contenedorRegistro">
+        <form autocomplete="off" class="formularioRegistro">
+            <div class="inputs">
+                <input type="text" placeholder=" Nombre" class="input">
+                <input type="text" placeholder=" Apellido" class="input">
+                <input type="text" placeholder=" Nombre de Usuario" class="input">
+                <input type="email" class="input" placeholder="email@dominio.com"> 
+                <input type="password" placeholder=" Contraseña" class="input">
+                <input type="password" placeholder=" Repetir contraseña" class="input">
+                <label for="nacimiento" class="labelFecha">Fecha de nacimiento</label>
+                <input type="date" name="nacimiento" id="nacimiento" class="input">
+            </div>
+            <div class="elementosCaptcha" id="bloqueCaptcha">
+                <p class="contenedorDeCaptcha" id="captcha">xxxxxx</p>
+                <input type="text" placeholder="captcha" id="inputCaptcha" class="input">
+            </div>
+            <div class="contenedorBotonesRegistro">
+                <button class="botonVisible oculto" id="registro">Registrarse</button>
+                <input type="button" class="botonVisible oculto" id="reintento" value="Reintentar">
+                <input type="button" class="botonVisible" id="verificacion" value="Verificar Captcha">
+            </div>
+        </form>
+        
+    </article>
+</section>

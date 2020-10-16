@@ -1,0 +1,63 @@
+<section class="contenedorPrincipal">
+    <section class="peliculas">
+        <h2>Acción</h2>
+        <div class="genero">
+            <img class="imagenPelicula peli1" src="../imagenes/peliculas/accion/1.jpg" >
+            <img class="imagenPelicula peli2" src="../imagenes/peliculas/accion/2.jpg" >
+            <img class="imagenPelicula peli3" src="../imagenes/peliculas/accion/3.jpg" >
+            <img class="imagenPelicula peli4" src="../imagenes/peliculas/accion/4.jpg" >
+        </div>
+        <h2>Animación</h2>
+        <div class="genero">
+            <img class="imagenPelicula peli1" src="../imagenes/peliculas/animacion/1.jpg" >
+            <img class="imagenPelicula peli2" src="../imagenes/peliculas/animacion/2.jpg" >
+            <img class="imagenPelicula peli3" src="../imagenes/peliculas/animacion/3.jfif" >
+            <img class="imagenPelicula peli4" src="../imagenes/peliculas/animacion/4.jpg" >
+        </div>
+        <h2>Ciencia ficción</h2>
+        <div class="genero">
+            <img class="imagenPelicula peli1" src="../imagenes/peliculas/cienciaficcion/1.jpg" >
+            <img class="imagenPelicula peli2" src="../imagenes/peliculas/cienciaficcion/2.jpg" >
+            <img class="imagenPelicula peli3" src="../imagenes/peliculas/cienciaficcion/3.jpg" >
+            <img class="imagenPelicula peli4" src="../imagenes/peliculas/cienciaficcion/4.jpg" >
+        </div>
+        <h2>Cine romántico</h2>
+        <div class="genero">
+            <img class="imagenPelicula peli1" src="../imagenes/peliculas/romantico/1.jpg" >
+            <img class="imagenPelicula peli2" src="../imagenes/peliculas/romantico/2.jpg" >
+            <img class="imagenPelicula peli3" src="../imagenes/peliculas/romantico/3.jpeg" >
+            <img class="imagenPelicula peli4" src="../imagenes/peliculas/romantico/4.jpg" >
+        </div>
+        
+    </section>
+    <section class="contenedorTabla">
+        <div> 
+            <input  type="text" class="inputTabla" id="busqueda" placeholder="País Buscado" autocomplete="off"> 
+            <button class="botonTabla" id="buscar">Buscar</button>
+            <button class="botonTabla" id="cancelarBusqueda">X</button>
+        </div>
+        <table id="tablaVisualizaciones">
+            <thead>
+                <tr>
+                    <td>Países</td>
+                    <td>Usuarios</td>
+                    <td>Películas vistas</td>
+                    <td>Borrar & editar</td>
+                </tr>
+            </thead>
+        </table>
+        <p class="error oculto" id="mensajeDeError">Error de Conexión</p>
+        <div class="botonesTabla">
+            <input class="botonVisible" type="button" value="Crear 3 items" id="tresItems">
+            <input class="botonVisible" type="button" value="Eliminar Tabla" id="eliminarTabla">
+        </div>
+        <form>
+            <!-- <label><input type="checkbox" id="check"/> Resaltar</label>     -->
+            <input class="input" type="text" placeholder="País" id="pais">
+            <input class="input" type="number" placeholder="Usuarios" id="usuarios">
+            <input class="input" type="number" placeholder="Películas vistas" id="visualizaciones">
+            <input class="botonVisible" type="button" value="CARGAR" id="cargarItem">
+        </form>
+    </section>
+</section>
+<script src="../js/table.js"></script>
