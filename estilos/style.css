@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: whitesmoke;
+}
+
+/* comienzo del header y barra*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #000839;
+    height: 80px;
+}
+
+h1{
+    font-size: 30px;
+    font-style: helvetica;
+    color: #ffa41b;
+    margin: 3%;
+}
+
+.logo{
+    height: auto;
+    width: 20%;
+    margin-right: 2%;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    background-color: #005082;
+}
+
+ul.navigation {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+    border-bottom: 4px solid #ffa41b;
+}
+
+ul.navigation.show {
+    display: flex;
+}
+
+ul.navigation li {
+    list-style: none;
+    margin: 0px 0px;
+    padding: 15px 20px;
+}
+
+ul.navigation li {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.imgMenu{
+    width: 15%;
+    margin: 3%;
+}
+/*fin de header y barra*/
+/*Contenido de la pagina de registro */
+.contenedorPrincipalRegistro{
+    display: flex;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.contenedorRegistro{
+    width: 60%;
+    margin-left:20%;
+    margin-right:20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1fcfc;
+}
+
+.formularioRegistro{
+    width: 90%;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: grey;
+}
+
+.elementosCaptcha{
+    padding-top: 2%;
+    background-color: rgba(163, 161, 161, 0.191);
+}
+
+.elementosCaptchaReintento{
+    background-color: rgba(221, 0, 0, 0.828);
+
+}
+
+.elementosCaptchaVerificado{
+    background-color: rgba(0, 189, 9, 0.863);
+}
+
+.contenedorDeCaptcha, .labelFecha{
+    margin-left:9%;
+}
+
+.input, .inputTabla{
+    width: 80%;
+    border: 1px solid grey;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 3%;
+    margin: 5%;
+    background-color: #f1fcfc;
+}
+
+.inputTabla{
+    width: 60%;
+    padding: 0%;
+    margin: 2%;
+    margin-right: 0%;
+}
+
+.contenedorBotonesRegistro{
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom:10% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonVisible , .botonTabla{
+    font-size:15px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:white;
+    background:#ffa41b;
+    border:0px;
+    height:50px;
+    margin: 3% 0 3% 0;
+}
+
+.botonTabla{
+    font-size: 10px;
+    height: 20px;
+    margin: 1% 0 1% 0;
+}
+
+.botonTabla:hover{
+    background-color: rgba(0, 0, 190, 0.959);
+}
+
+.botonVisible:hover{
+    background-color: rgba(0, 0, 190, 0.959);
+}
+
+.oculto{
+    display: none;
+}
+/*fin del contenido de la pagina de registro*/
+h2{
+    font-family: serif;
+    /* text-align: center; */  /*funciona para desktop*/
+    margin-left: 5%; /*funciona para mobile*/
+    margin: 4%;
+    color: #3c352f;
+    width: 75%;
+    font-size: 37px;
+    /* margin: 0px; */ /*funciona para desktop*/
+}
+
+/*inicio contenido del home*/
+
+.contenedorPrincipal{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    grid-template-areas:
+    "contPeliculas contPeliculas contPeliculas contPeliculas"
+    ". contPrincipalSection contPrincipalSection ."
+    "contPrincipalTabla contPrincipalTabla contPrincipalTabla contPrincipalTabla"
+
+}
+
+.peliculas{
+    grid-area: contPeliculas;
+
+}
+
+.pelicula , .genero{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: rgba(155, 190, 187, 0.671);
+    font-size: 20px;
+    padding: 2%;
+    margin: 1%;
+}
+
+.genero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "peli1 peli2"
+    "peli3 peli4"
+    ;
+}
+
+.peli1{
+    grid-area: peli1;
+}
+
+.peli2{
+    grid-area: peli2;
+}
+
+.peli3{
+    grid-area: peli3;
+}
+
+.peli3{
+    grid-area: peli4;
+}
+
+.imagenPelicula{
+    width: 90%;/*es el 90% de la columna*/
+    margin: 5%;/*5% por izquierda 5% por derecha y resulta el 100% de la culuma si le sumas el 90% de arriba*/
+}
+
+.imagenPeliculaHome{
+    width: 98%;
+    padding: 1%;
+}
+
+.publicidades{
+    grid-area: contPrincipalSection;
+    width: 100%;
+}
+
+.publicidad{
+    width: 98%;
+    padding: 2%;
+    margin: 1%;
+}
+
+/*fin contenido del home*/
+/*Inicio contenido categorias */
+
+thead{
+    color: rgba(94, 1, 148, 0.993);
+    background-color: rgba(155, 190, 187, 0.671);
+}
+
+table, td, tr{
+    color: #3c352f;
+    border: 2px solid rgba(155, 190, 187, 0.671);
+    border-collapse: collapse;
+}
+
+table{
+    margin: 2%;
+}
+
+.contenedorTabla{
+    grid-area: contPrincipalTabla;
+    margin: 3%;
+}
+
+.resaltadoTabla{
+    background-color: #ffa41b;
+}
+
+.error{
+    background-color: red;
+}
+
+.botonesTabla{
+    display: flex;
+    flex-direction: column;
+}
+
+section.contenedorTabla form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/*Fin contenido categorias*/
+/*inicio footer*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000839;
+    height: 80px;
+}
+
+a.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2% 0 2% 0;
+}
+
+.logoRedes{
+    width: 25%
+}
+/*Fin footer*/
+@media only screen and (min-width: 500px){
+    header{
+        height: 120px;
+    }
+}
+@media only screen and (min-width: 800px){
+    /*Inicio header y nav*/
+    header{
+        height: auto;
+    }
+
+    h1{
+        font-size: 60px;
+    }
+
+    .imgMenu{
+        display: none;
+    }
+
+    ul.navigation{
+        display: flex;
+        flex-direction: row;
+        border-bottom: 10px solid #ffa41b;
+        justify-content: space-around;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    li a{
+        list-style: none;
+        margin: 0px 10px;
+        color: white;
+        text-transform: uppercase;
+        padding: 15px;
+        
+    }
+
+    nav ul li:hover{
+        background-color: #ffa41b;
+    }
+    /*Fin header y nav*/
+
+    /*Inicio contenedor Principal*/
+    .contenedorRegistro{
+        -webkit-box-shadow: -1px 0px 11px -8px rgba(255,164,27,1);
+        -moz-box-shadow: -1px 0px 11px -8px rgba(255,164,27,1);
+        box-shadow: -1px 0px 11px -8px rgba(255,164,27,1);
+    }
+
+    .formularioRegistro{
+        width: 25%;
+    }
+
+    .genero{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .imagenPelicula{
+        width: 20%;
+        margin: 0%;
+
+    }
+
+    .imagenPeliculaHome{
+        width: 23%;
+    }
+
+
+    /*Fin contenedor Principal*/
+
+    table{
+        width: 200px;
+        margin: 0%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .contenedorTabla{
+        margin-left: 3%;
+    }
+
+    /*inicio del contenido de la pagina home*/
+    .contenedorPrincipal{
+        display: flex;
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .peliculas{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+    
+    .pelicula{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        background-color: rgba(155, 190, 187, 0.671);
+        width: 94%;
+        font-size: 20px;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    .publicidades{
+        width: 25%;
+    }
+
+    .publicidad{
+        display: flex;
+        width: 94%;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    /*fin del contenido de la pagina home*/
+    
+    /*inicio Footer*/
+    footer{
+        justify-content: flex-end;
+        height: 150px;
+    }
+
+    .logoRedes{
+       width: 25px; 
+    }
+
+    a.social{
+        margin: 0 3% 0 3%;
+    }
+    /*fin Footer*/
+}
