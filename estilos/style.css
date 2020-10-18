@@ -5,6 +5,12 @@ body{
     background-color: whitesmoke;
 }
 
+h1{
+    font-size: 30px;
+    font-style: helvetica;
+    color: #ffa41b;
+    margin: 3%;
+}
 
 header{
     display: flex;
@@ -14,13 +20,6 @@ header{
     flex-wrap: wrap;
     background-color: #000839;
     height: 80px;
-}
-
-h1{
-    font-size: 30px;
-    font-style: helvetica;
-    color: #ffa41b;
-    margin: 3%;
 }
 
 .logo{
@@ -157,11 +156,11 @@ ul.navigation li {
     margin: 1% 0 1% 0;
 }
 
-.botonTabla:hover{
+.botonVisible:hover{
     background-color: rgba(0, 0, 190, 0.959);
 }
 
-.botonVisible:hover{
+.botonTabla:hover{
     background-color: rgba(0, 0, 190, 0.959);
 }
 
@@ -201,7 +200,7 @@ h2{
     display: flex;
     flex-direction: column;
     text-align: left;
-    background-color: rgba(155, 190, 187, 0.671);
+    background-color: rgba(155, 191, 187, 0.671);
     font-size: 20px;
     padding: 2%;
     margin: 1%;
@@ -264,7 +263,7 @@ thead{
 
 table, td, tr{
     color: #3c352f;
-    border: 2px solid rgba(155, 190, 187, 0.671);
+    border: 2px solid rgba(155, 191, 187, 0.671);
     border-collapse: collapse;
 }
 
@@ -278,7 +277,7 @@ table{
 }
 
 .resaltadoTabla{
-    background-color: #ffa41b;
+    background-color: #ffa42b;
 }
 
 .error{
@@ -366,7 +365,7 @@ a.social{
     }
 
     .formularioRegistro{
-        width: 25%;
+        width: 26%;
     }
 
     .genero{
@@ -389,7 +388,7 @@ a.social{
     /*Fin contenedor Principal*/
 
     table{
-        width: 200px;
+        width: 201px;
         margin: 0%;
         margin-top: 2%;
         margin-bottom: 2%;
