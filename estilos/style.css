@@ -157,6 +157,20 @@ ul.navigation li {
     margin: 3% 0 3% 0;
 }
 
+
+}
+/*fin del contenido de la pagina de registro*/
+h2{
+    font-family: serif;
+    /* text-align: center; */  /*funciona para desktop*/
+    margin-left: 5%; /*funciona para mobile*/
+    margin: 4%;
+    color: #3c352f;
+    width: 75%;
+    font-size: 37px;
+    /* margin: 0px; */ /*funciona para desktop*/
+}
+
 .botonTabla{
     font-size: 10px;
     height: 20px;
@@ -175,18 +189,6 @@ ul.navigation li {
 
 .oculto{
     display: none;
-}
-/*fin del contenido de la pagina de registro*/
-h2{
-    font-family: serif;
-    /* text-align: center; */  /*funciona para desktop*/
-    margin-left: 5%; /*funciona para mobile*/
-    margin: 4%;
-    color: #3c352f;
-    width: 75%;
-    font-size: 37px;
-    /* margin: 0px; */ /*funciona para desktop*/
-}
 
 /*inicio contenido del home*/
 
