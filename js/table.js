@@ -39,8 +39,6 @@ function iniciarPrincipal(){
     //    eliminarTablaDelDOM();
     //    await cargarTabla();
     // }
-
-    //test
     async function borrarFila(this_a){
         //console.log(this_a);
         await eliminarDeAPI(this_a.parentNode.parentNode.id)
@@ -125,6 +123,8 @@ function iniciarPrincipal(){
         });
     } 
 
+
+    ///test
     function agregarItemAlDOM(nuevoPais, _id){
         if ( /*(document.querySelector("#check").checked == false) &&*/ (nuevoPais.usuarios < 6000) ){
             let nuevo_tr = document.createElement("tr");//creo un elemento tr y lo guardo como "nuevo_tr"
