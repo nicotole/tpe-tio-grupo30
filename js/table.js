@@ -40,6 +40,7 @@ function iniciarPrincipal(){
     //    await cargarTabla();
     // }
 
+    //test
     async function borrarFila(this_a){
         //console.log(this_a);
         await eliminarDeAPI(this_a.parentNode.parentNode.id)
@@ -364,4 +365,14 @@ function iniciarPrincipal(){
     document.querySelector("#eliminarTabla").addEventListener("click",eliminarTabla);
     document.querySelector("#tresItems").addEventListener("click", crearTresItems);
     document.querySelector("#cargarItem").addEventListener("click",cargarItem);
+
+
+    //function para testeo
+    function test(){
+        console.log("test")
+    }
+
+    document.querySelector("#testear").addEventListener("click", test);
+    document.querySelector("#test").addEventListener("click", test);
+    document.querySelector("#consult").addEventListener("click", test);
 }
