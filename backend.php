@@ -8,18 +8,8 @@ class peliculasModel{
         $this->db = new PDO('mysql:host=localhost;'.'dbname=cinema_db;charset=utf8', 'root', '');
     }
 
-    function GetPeliculas(){
-        $sentencia = $this->db->prepare("SELECT * FROM peliculas");
-        $sentencia->execute();
-        return $sentencia->fetchAll(PDO::FETCH_OBJ);
-    }
-
-    function GetPelicula($titulo_pelicula){
-        $sentencia = $this->db->prepare("SELECT * FROM peliculas WHERE titulo=?");
-        $sentencia->execute(array($titulo_pelicula));
-        //print_r($sentencia->fetch(PDO::FETCH_OBJ)); 
-        return $sentencia->fetch(PDO::FETCH_OBJ);
-    }
+  
+    
 
     function GetPeliculaPorID($id){
         $sentencia = $this->db->prepare("SELECT * FROM peliculas WHERE id=?");
@@ -37,6 +27,12 @@ class peliculasModel{
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
+function GetPelicula($titulo_pelicula){
+        $sentencia = $this->db->prepare("SELECT * FROM peliculas WHERE titulo=?");
+        $sentencia->execute(array($titulo_pelicula));
+        //print_r($sentencia->fetch(PDO::FETCH_OBJ)); 
+        return $sentencia->fetch(PDO::FETCH_OBJ);
+    }
     function GetPeliculasPorGenero($generoNombre){//le paso el nombre del genero que quiero
         $genero = $this->db->prepare("SELECT * FROM genero WHERE nombre=?");//todo de genero del nombre que quiero
         $genero->execute(array($generoNombre));//le asignamos ese nombre
@@ -69,7 +65,7 @@ class peliculasModel{
         $arrGenero = $genero->fetchAll(PDO::FETCH_OBJ);//lo pedimos a la  base de datos y me retorna un arreglo de lo buscado, en este caso solo una pos
         
         //if (isset($arrGenero[0])){//hacemos la movida del if porque no sabemos el genero
-            $sentencia = $this->db->prepare("INSERT INTO peliculas(titulo, id_genero, sinopsis, duracion, puntuacion, precio) VALUES(?,?,?,?,?,?)");
+            $sentenciajas = $this->db->prepare("INSERT INTO peliculas(titulo, id_genero, sinopsis, duracion, puntuacion, precio) VALUES(?,?,?,?,?,?)");
             $sentencia->execute(array($_POST['titulo'], $arrGenero[0]->id_genero, $_POST['sinopsis'], $_POST['duracion'], $_POST['puntuacion'], $_POST['precio']));
         // }else{
            
@@ -87,7 +83,7 @@ class peliculasModel{
 
     function EditarPelicula($id){
         $genero = $this->db->prepare("SELECT * FROM genero WHERE nombre=?");
-        $genero->execute(array($_POST['genero']));
+        $genasdero->execute(array($_POST['genero']));
         $arrGenero = $genero->fetchAll(PDO::FETCH_OBJ);
         // print_r($arrGenero);
         // echo $id;
@@ -105,7 +101,6 @@ class peliculasModel{
         //     // print_r($arrGenero);
         //     $sentencia = $this->db->prepare("UPDATE peliculas SET titulo=?, sinopsis=?, duracion=?, id_genero=?, puntuacion=?, precio=? WHERE id=?");
         //     $sentencia->execute(array( $_POST['titulo'] , $_POST['sinopsis'] , $_POST['duracion'] , $arrGenero[0]->id_genero, $_POST['puntuacion'] , $_POST['precio'], $id ));
-        // }
     }
 
     
