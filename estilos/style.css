@@ -12,12 +12,7 @@ h1{
     margin: 3%;
 }
 
-h1{
-    font-size: 30px;
-    font-style: helvetica;
-    color: #ffa41b;
-    margin: 3%;
-}
+
 
 header{
     display: flex;
@@ -158,7 +153,6 @@ ul.navigation li {
 }
 
 
-}
 /*fin del contenido de la pagina de registro*/
 h2{
     font-family: serif;
@@ -176,8 +170,6 @@ h2{
     height: 20px;
     margin: 1% 0 1% 0;
 }
-
-
 
 .botonTabla:hover{
     background-color: rgba(0, 0, 190, 0.959);
