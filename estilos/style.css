@@ -102,7 +102,7 @@ ul.navigation li {
 }
 
 .elementosCaptchaReintento{
-    background-color: rgba(221, 0, 0, 0.828);
+    background-color: red;
 
 }
 
@@ -191,7 +191,7 @@ h2{
     grid-template-areas:
     "contPeliculas contPeliculas contPeliculas contPeliculas"
     ". contPrincipalSection contPrincipalSection ."
-    "contPrincipalTabla contPrincipalTabla contPrincipalTabla contPrincipalTabla"
+    "contPrincipalTabla contPrincipalTabla contPrincipalTabla contPrincipalTabla";
 
 }
 
