@@ -6,7 +6,7 @@ function iniciarPrincipal(){
     let link = "https://web-unicen.herokuapp.com/api/groups/131/estadisticas";
 
     cargarTabla();
-    let intervalo = setInterval(actualizarTabla ,30000);
+    let intervalo = setInterval(actualizarTabla ,40000);
 
     async function cargarTabla(){
         try {
